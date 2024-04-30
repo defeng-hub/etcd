@@ -410,6 +410,9 @@ service Auth {
   }
 }
 
+// etcd所有的api返回结果里都增加了Response header
+// 包括集群的元信息：All Responses from etcd API have an attached response header which includes cluster metadata for the response
+// 具体内容如下
 message ResponseHeader {
   option (versionpb.etcd_version_msg) = "3.0";
 
